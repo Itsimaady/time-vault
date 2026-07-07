@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TimeVault | Digital Time Capsule</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+
+<!-- Background Effects -->
+<div class="background"></div>
+
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        ⏳ TimeVault
+    </div>
+
+
+    <div class="nav-actions">
+
+        <button id="themeBtn">
+            🌙
+        </button>
+
+    </div>
+
+</nav>
+
+
+
+
+<!-- HERO SECTION -->
+
+
+<section class="hero">
+
+
+    <div class="hero-content">
+
+        <h1>
+            Preserve Today's Moments
+            <span>For Tomorrow's You</span>
+        </h1>
+
+
+        <p>
+            Create digital time capsules filled with memories,
+            messages and images that unlock in the future.
+        </p>
+
+
+        <button class="primary-btn" onclick="scrollToCreate()">
+            Create Capsule
+        </button>
+
+
+    </div>
+
+
+
+</section>
+
+
+
+
+
+<!-- STATISTICS -->
+
+
+<section class="stats">
+
+
+<div class="stat-card">
+
+<h2 id="totalCapsules">
+0
+</h2>
+
+<p>
+Total Capsules
+</p>
+
+</div>
+
+
+
+
+<div class="stat-card">
+
+<h2 id="lockedCapsules">
+0
+</h2>
+
+<p>
+Locked
+</p>
+
+</div>
+
+
+
+
+
+<div class="stat-card">
+
+<h2 id="openedCapsules">
+0
+</h2>
+
+<p>
+Unlocked
+</p>
+
+</div>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- CREATE CAPSULE -->
+
+
+<section class="create-section" id="create">
+
+
+<h2>
+Create New Capsule
+</h2>
+
+
+
+<div class="form-card">
+
+
+<input 
+type="text"
+id="title"
+placeholder="Capsule Title"
+>
+
+
+
+<textarea
+id="message"
+placeholder="Write your memory..."
+></textarea>
+
+
+
+
+
+<div class="input-group">
+
+
+<label>
+Unlock Date
+</label>
+
+
+<input
+type="date"
+id="unlockDate"
+>
+
+
+</div>
+
+
+
+
+
+<div class="input-group">
+
+
+<label>
+Upload Memory Image
+</label>
+
+
+<input
+type="file"
+id="imageUpload"
+accept="image/*"
+>
+
+
+</div>
+
+
+
+
+
+<select id="privacy">
+
+
+<option value="Private">
+Private Capsule
+</option>
+
+
+<option value="Public">
+Public Capsule
+</option>
+
+
+</select>
+
+
+
+
+
+<button
+class="primary-btn"
+onclick="createCapsule()"
+>
+
+Create Capsule
+
+</button>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- CAPSULE DISPLAY -->
+
+
+<section class="capsules-section">
+
+
+<h2>
+My Capsules
+</h2>
+
+
+
+<div 
+id="capsuleContainer"
+class="capsule-grid"
+>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- MODAL -->
+
+
+<div 
+id="modal"
+class="modal"
+>
+
+
+<div class="modal-box">
+
+
+<span 
+onclick="closeModal()"
+class="close"
+>
+×
+</span>
+
+
+<div id="modalContent">
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<footer>
+
+
+<p>
+© 2026 TimeVault | Store memories beyond time
+</p>
+
+
+</footer>
+
+
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
